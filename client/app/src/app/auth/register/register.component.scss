@@ -1,0 +1,177 @@
+.grid-container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "right center left";
+    
+  }
+  
+  .right {
+    grid-area: center;
+  }
+
+  main {
+    background-color: #f7f7f7;	
+  }
+  .section-about {
+    background-color: #f7f7f7;
+    padding: 15rem 0;
+    margin-top: -30vh;
+    margin-bottom: -30vh;
+  }
+  
+  .heading-secondary {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right, rgba(248, 157, 187, 0.801),
+    rgba(219, 83, 128, 0.801));
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .u-center-text { text-align: center; }
+  
+  .header {
+        height: 95vh;
+        background-image: linear-gradient(
+            to right bottom,
+            rgba(255, 240, 245, 0.801),
+            rgba(216, 112, 147, 0.801)),
+            url(../../../assets/people-2586426_1280.jpg);
+        background-size: cover;
+        background-position: top; 
+      
+      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      position: relative;
+    }
+    
+    .heading-primary {
+      color: #fff;
+      text-transform: uppercase;
+    
+      backface-visibility: hidden;
+      margin-bottom: 60px;
+    
+    }
+    
+    .heading-primary--main {
+      display: block;
+      font-size: 60px;
+      font-weight: 400;
+      letter-spacing: 30px;
+    
+      animation-name: moveInLeft;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+      /*
+      animation-delay: 2s; RETRASAR LA ANIMACION
+      animation-iteration-count: 3; REPETIR ANIMACION
+      */
+    
+    }
+    
+    .heading-primary--sub {
+      display: block;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 18px;
+      animation-name: moveInRight;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+    }
+    
+    .header__text-box {
+      position: absolute;
+      top: 40%; //posicion respecto al padre
+      left: 50%; //posicion respecto al padre
+      transform: translate(-50%, -50%); //centrar el bloque
+      text-align: center;
+    }
+    
+    @keyframes moveInLeft {
+      0% {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      
+      80% {
+        transform: translateX(10px);
+      }
+    
+      100% {
+        opacity: 1;
+        transform: translate(0);
+      }
+    }
+    
+    @keyframes moveInRight {
+      0% {
+        opacity: 0;
+        transform: translateX(100px);
+      }
+    
+      80% {
+        transform: translateX(-10px);
+      }
+    
+      100% {
+        opacity: 1;
+        transform: translate(0);
+      }
+    }
+    
+    
+    .btn:link,
+    .btn:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 15px 40px;
+      display: inline-block;
+      border-radius: 100px;
+      transition: all .2s;
+    }
+    
+    .btn--white {
+      background-color: #fff;
+      color: #777;
+    
+    }
+    
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,.2)
+    }
+    
+    .btn.active {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 10px rgba(0,0,0,.2)
+    }
+
+    .btn-send {
+      background-color:#eab1c3;
+    }
+
+    .btn-send:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,.2)
+    }
+
+    .btn-send{
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 5px 40px;
+      display: inline-block;
+      border-radius: 100px;
+      transition: all .2s;
+      margin-bottom: 80px;
+      color: white;
+
+    }
+
+    label {
+      font-weight: bold;
+      text-transform: uppercase;
+    }

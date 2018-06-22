@@ -1,0 +1,29 @@
+.grid-container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "left-section right-section";
+  }
+  
+  .left {
+    grid-area: left-section;
+    height: 100%;
+    width: 100%;
+    padding: 5%;
+  }
+  
+  .right {
+    grid-area: right-section;
+    padding: 5%;
+  }
+  
+  h3 {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+}

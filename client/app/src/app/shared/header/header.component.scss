@@ -1,0 +1,35 @@
+.heading-primary--main {
+	display: block;
+	font-size: 60px;
+	font-weight: 400;
+	letter-spacing: 47px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.heading-primary--sub {
+	display: block;
+	font-size: 20px;
+	font-weight: 400;
+	letter-spacing: 20px;
+	color: #fff;
+	text-transform: uppercase;
+}
+  
+nav {
+	display: flex;
+    flex-direction: column;
+
+	img.logo {
+		width: 250px;
+		    padding: 20px;
+	}
+}
+
+.navbar {
+		background: linear-gradient(
+		to right bottom,
+		rgba(255, 240, 245, 0.801),
+		rgba(216, 112, 147, 0.801));
+}
+

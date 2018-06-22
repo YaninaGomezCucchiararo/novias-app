@@ -1,0 +1,68 @@
+<header class="header" [routerLink]="['/login']">
+
+  <div class="header__text-box">
+    <h1 class="heading-primary">
+      <span class="heading-primary--main">Novias</span>
+      <span class="heading-primary--sub">cumple tu sueño</span>
+    </h1>
+    <a [routerLink]="['/login']" class="btn btn--white">Login</a>
+  </div>
+</header>
+
+<main>
+  <section class="section-about">
+    <div class="u-center-text">
+      <h2 class="heading-secondary">
+        Regístrate
+      </h2>
+    </div>
+  </section>
+
+
+  <div class="grid-container">
+
+    <div class="right">
+      <form (ngSubmit)="handlerSubmit()" #forma="ngForm" autocomplete="off">
+
+        <div class="form-group">
+          <label for="pwd">Nombre:</label>
+          <input [(ngModel)]="user.username" name="username" type="text" class="form-control" placeholder="Nombre" required #username="ngModel">
+          <div *ngIf="username.errors?.required" class="form-control-feedback">
+            Este campo es requerido</div>
+        </div>
+
+        <div class="form-group">
+          <label for="pwd">Ciudad:</label>
+          <input [(ngModel)]="user.location" name="location" type="text" class="form-control" placeholder="Ciudad" required #location="ngModel">
+          <div *ngIf="location.errors?.required">Este campo es requerido</div>
+
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input [(ngModel)]="user.email" name="email" type="email" class="form-control" placeholder="email" required #email="ngModel">
+          <div *ngIf="email.errors?.required">Este campo es requerido</div>
+        </div>
+
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input [(ngModel)]="user.password" name="password" type="password" class="form-control" placeholder="password" required #password="ngModel">
+          <div *ngIf="password.errors?.required">Este campo es requerido</div>
+        </div>
+        <div *ngIf="messageError">
+            <div class="alert alert-danger">
+              <strong>ERROR {{messageError}}</strong>
+            </div>
+          </div>
+
+        <button type="submit" class="btn-send">
+          Confirmar
+        </button>
+        <br>
+        <br>
+        <br>
+
+      </form>
+    </div>
+  </div>
+</main>

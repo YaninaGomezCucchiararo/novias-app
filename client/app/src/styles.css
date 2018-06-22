@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/*SEGUNDO DISEÑO*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-size: 16px;
+    line-height: 1.7;
+    padding: 30px;
+    font-family: 'Lato', sans-serif;
+} 
+

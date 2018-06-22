@@ -1,0 +1,73 @@
+<h3>AÑADIR PRODUCTO</h3>
+<hr/>
+<div class="grid-container m-5">
+
+  <div class="addProduct">
+    <div class="grid-container m-5">
+      <div>
+        <form (ngSubmit)="handlerSubmit()" #forma="ngForm" autocomplete="off">
+
+          <div class="form-group">
+            <label> Precio:</label>
+            <input [(ngModel)]="product.price" name="username" min="0" type="number" class="form-control" placeholder="Precio">
+          </div>
+
+          <div class="form-group">
+            <label> Talla:</label>
+            <select name="size" class="form-control" [(ngModel)]="product.size">
+              <option selected [value]="''">Todas</option>
+              <option value="32">32</option>
+              <option value="34">34</option>
+              <option value="36">36</option>
+              <option value="38">38</option>
+              <option value="40">40</option>
+              <option value="42">42</option>
+              <option value="44">44</option>
+              <option value="46">46</option>
+              <option value="48">48</option>
+              <option value="50">50</option>
+              <option value="52">52</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="color">Busca por color:</label>
+            <select name="color" class="form-control" [(ngModel)]="product.color">
+              <option selected [value]="''">Todos</option>
+              <option value="blanco">blanco</option>
+              <option value="blanco roto">blanco roto</option>
+              <option value="blanco óptico">blanco óptico</option>
+              <option value="beige">beige</option>
+              <option value="marfil">marfil</option>
+              <option value="crema">crema</option>
+              <option value="lila">lila</option>
+              <option value="rosado">rosa</option>
+              <option value="celeste">celeste</option>
+              <option value="negro">negro</option>
+              <option value="blanco-negro">blanco-negro</option>
+              <option value="plateado">plateado</option>
+              <option value="dorado">dorado</option>
+              <option value="amarillo">amarillo</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Descripción del producto:</label>
+            <input [(ngModel)]="product.description" name="newEmail" type="email" class="form-control" placeholder="Descripción del producto">
+          </div>
+
+
+          <div class="form-group">
+            <label>Imagen del producto:</label>
+            <input type="file" (change)="onFileSelected($event)">
+          </div>
+
+          <button type="submit" class="btn" (click)="goToHome">
+            Subir producto
+          </button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

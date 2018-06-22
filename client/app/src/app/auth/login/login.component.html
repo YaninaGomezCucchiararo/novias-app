@@ -1,0 +1,49 @@
+<header class="header" [routerLink]="['']">
+
+  <div class="header__text-box">
+    <h1 class="heading-primary">
+      <span class="heading-primary--main">Novias</span>
+      <span class="heading-primary--sub">cumple tu sueño</span>
+    </h1>
+    <a [routerLink]="['/login']" class="btn btn--white">Register</a>
+  </div>
+</header>
+
+<main>
+  <section class="section-about">
+    <div class="u-center-text">
+      <h2 class="heading-secondary">
+        Login
+      </h2>
+    </div>
+  </section>
+  
+
+  <div class="grid-container ">
+     
+    <div class="right">
+      <form (ngSubmit)="handlerSubmit()" #forma="ngForm">
+
+        <div class="form-group">
+          <label for="email">EMAIL</label>
+          <input [(ngModel)]="params.email" name="email" type="email" class="form-control" placeholder="email">
+        </div>
+
+        <div class="form-group">
+          <label for="pwd">PASSWORD</label>
+          <input [(ngModel)]="params.password" name="password" type="password" class="form-control" placeholder="password">
+        </div>
+        <div *ngIf="messageError">
+            <div class="alert alert-danger">
+              <strong>ERROR {{messageError}}</strong>
+            </div>
+          </div>
+
+        <button [disabled]="!forma.valid" type="submit" class="btn-send">
+          Entrar
+        </button>
+       
+      </form>
+    </div>
+  </div>
+</main>

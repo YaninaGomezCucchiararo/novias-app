@@ -1,0 +1,13 @@
+
+ <app-loading *ngIf="loading"></app-loading>
+
+ <div class="container" *ngIf="!loading ">
+   
+  <app-filter (onChange)="onFilterChange($event)"></app-filter>
+   
+   <div class="cards-container">
+     <app-product-card [product]="product" [productId]="product._id" *ngFor="let product of productsFiltered"></app-product-card>
+   </div>
+   
+ </div>
+

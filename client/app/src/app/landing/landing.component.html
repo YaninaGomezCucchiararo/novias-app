@@ -1,0 +1,28 @@
+<header class="header">
+
+  <div class="header__text-box">
+    <h1 class="heading-primary">
+      <span class="heading-primary--main">Novias</span>
+      <span class="heading-primary--sub">cumple tu sueño</span>
+    </h1>
+    <a [routerLink]="['/login']" class="btn btn--white">Login</a>
+    <a [routerLink]="['/register']" class="btn btn--white">Register</a>
+  </div>
+</header>
+
+<main>
+  <section class="section-about">
+    <div class="u-center-text">
+      <h2 class="heading-secondary">
+        Publica o encuentra tu vestido ideal para ese día tan especial!
+      </h2>
+    </div>
+  </section>
+
+  <div class="container" *ngIf="!loading ">
+    <app-filter (onChange)="onFilterChange($event)"></app-filter>
+    <div class="cards-container">
+      <app-product-card [product]="product" [productId]="product._id" *ngFor="let product of productsFiltered"></app-product-card>
+    </div>
+  </div>
+</main>

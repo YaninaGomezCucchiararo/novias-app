@@ -1,0 +1,27 @@
+//PRIMER DISEÑO..............
+.card {
+    height: 500px;
+    width: 300px;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 1.5rem 4rem 0 rgba(0,0,0,.15);
+    }
+
+    .img-container {
+        width: 100%;
+        height: 70%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        clip-path: polygon( 0 0, 100% 0, 100% 85%, 0 100%);
+        
+    }
+    
+    .info {
+        background-color: white;
+        text-align: center;
+    }
+}

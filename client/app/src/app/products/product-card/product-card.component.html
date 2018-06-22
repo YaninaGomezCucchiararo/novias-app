@@ -1,0 +1,15 @@
+<!-- PRIMER DISEÑO -->
+<div class="card">
+    <a class="img-container" (click)="goToProduct()" [ngStyle]="{ 'background-image': 'url(' + product.image + ')'}">
+    </a>
+    <div class="info">
+      <h3>{{product.price}}€</h3>
+      <p>{{product.color | uppercase }}</p>
+      <p>Talla:  {{product.size}}</p>
+    </div>
+  </div>
+
+ 
+
+
+
